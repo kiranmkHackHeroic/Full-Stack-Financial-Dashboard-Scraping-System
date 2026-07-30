@@ -1,0 +1,8 @@
+{
+  "name": "Machine Learning Financial Analysis System",
+  "description": "A web application to display financial analysis (pros and cons) for Nifty 100 companies, based on rule-based insights, presented in a real-time dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
