@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npx vite build",
+  "buildCommand": "npx vite build --root .",
   "outputDirectory": "dist",
   "installCommand": "npm install --include=dev",
   "rewrites": [
