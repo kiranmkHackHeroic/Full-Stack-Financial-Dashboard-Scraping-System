@@ -10,7 +10,8 @@ export const fetchCompanyNews = async (companyName: string): Promise<{ summary: 
       headers['Authorization'] = `Bearer ${token}`;
     }
 
-    const res = await fetch('/api/news', {
+    const apiBase = import.meta.env.VITE_API_URL || '';
+    const res = await fetch(`${apiBase}/api/news`, {
       method: 'POST',
       headers,
       body: JSON.stringify({ companyName }),

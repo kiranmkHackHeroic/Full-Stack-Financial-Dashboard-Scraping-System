@@ -31,8 +31,9 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
     setLoading(true);
 
     try {
+      const apiBase = import.meta.env.VITE_API_URL || '';
       const endpoint = isRegistering ? '/api/auth/register' : '/api/auth/login';
-      const response = await fetch(endpoint, {
+      const response = await fetch(`${apiBase}${endpoint}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

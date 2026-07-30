@@ -5,6 +5,7 @@ import { createServer as createViteServer } from 'vite';
 import { GoogleGenAI } from '@google/genai';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
+import cors from 'cors';
 import { initDB, getDB } from './database';
 
 // Manually load .env.local variables on startup
@@ -65,6 +66,7 @@ async function startServer() {
   const app = express();
   const PORT = 3000;
 
+  app.use(cors());
   app.use(express.json());
 
   // API Routes
